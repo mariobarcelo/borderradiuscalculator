@@ -10,19 +10,21 @@ function App() {
 		<>
 			<h1>Border Radius Calculator</h1>
 
-			<label htmlFor='age-select'>
-				¿Qué border-radius quieres conocer?
-			</label>
+			<div>
+				<label htmlFor='age-select'>
+					¿Qué border-radius quieres conocer?
+				</label>
 
-			<select
-				id='age-select'
-				value={selectedRadius}
-				onChange={(event) => {
-					setSelectedRadius(event.target.value);
-				}}>
-				<option value='inner-radius'>Inner Radius</option>
-				<option value='outer-radius'>Outer Radius</option>
-			</select>
+				<select
+					id='age-select'
+					value={selectedRadius}
+					onChange={(event) => {
+						setSelectedRadius(event.target.value);
+					}}>
+					<option value='inner-radius'>Inner Radius</option>
+					<option value='outer-radius'>Outer Radius</option>
+				</select>
+			</div>
 
 			{selectedRadius === 'inner-radius' ? (
 				<InnerRadiusCalculator />
@@ -30,7 +32,10 @@ function App() {
 				<OuterRadiusCalculator />
 			)}
 
-			<p className='read-the-docs'>Handcrafted by Mario Barceló</p>
+			<p className='credits'>
+				Handcrafted by{' '}
+				<a href='https://mariobarcelo.com'>Mario Barceló</a>
+			</p>
 		</>
 	);
 }

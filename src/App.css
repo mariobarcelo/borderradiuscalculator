@@ -18,21 +18,6 @@
 	filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	a:nth-of-type(2) .logo {
-		animation: logo-spin infinite 20s linear;
-	}
-}
-
 .card {
 	display: flex;
 	flex-direction: column;
@@ -43,6 +28,76 @@
 	margin: 0 auto;
 }
 
-.read-the-docs {
+fieldset {
+	border: none;
+	width: 100%;
+}
+
+.inputWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.inputWrapper [type='range'] {
+	width: 100%;
+}
+
+.credits {
 	color: #888;
+}
+
+.slider {
+	--handle-size: 16px;
+	--handle-radius: 1000px;
+	--track-size: 3px;
+	--bg: white;
+	--track-color: hsl(0deg 0% 50% / 0.25);
+	--handle-color: hsl(18.84, 62.05%, 61.76%);
+	--track-active-color: hsl(0deg 0% 50% / 0.125);
+	--handle-active-color: hsl(19deg 66% 68%);
+
+	display: block;
+	width: 100%;
+	background: transparent;
+	appearance: none;
+	outline-offset: 16px;
+	cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+	appearance: none;
+	height: var(--handle-size);
+	width: var(--handle-size);
+	border-radius: var(--handle-radius);
+	background: var(--handle-color);
+	cursor: grab;
+	transform: translateY(calc(-50% + var(--track-size) / 2));
+	outline: 2px solid var(--bg);
+}
+.slider::-moz-range-thumb {
+	background: var(--handle-color);
+	border: 2px solid var(--bg);
+	border-radius: var(--handle-radius);
+	height: var(--handle-size);
+	width: var(--handle-size);
+}
+.slider:active::-webkit-slider-thumb,
+.slider:active::-moz-range-thumb {
+	cursor: grabbing;
+	background: var(--handle-active-color);
+}
+.slider::-webkit-slider-runnable-track {
+	width: calc(100% - var(--handle-size));
+	height: var(--track-size);
+	background: var(--track-color);
+	border-radius: var(--track-size) / 2;
+	margin: calc(var(--handle-size) / 2) 0;
+}
+.slider::-moz-range-track {
+	background: var(--track-color);
+}
+.slider:active::-webkit-slider-runnable-track,
+.slider:active::-moz-range-track {
+	background: var(--track-active-color);
 }
