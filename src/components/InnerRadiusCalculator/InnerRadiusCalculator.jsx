@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './InnerRadiusCalculator.module.css';
+import Slider from '../Slider';
 
 function InnerRadiusCalculator() {
 	const [outerRadius, setOuterRadius] = React.useState(63);

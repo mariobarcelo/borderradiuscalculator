@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './OuterRadiusCalculator.module.css';
 
 function OuterRadiusCalculator() {
 	const [outerRadius, setOuterRadius] = React.useState(63);
