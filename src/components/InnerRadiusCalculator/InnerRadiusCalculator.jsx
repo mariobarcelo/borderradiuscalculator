@@ -20,7 +20,23 @@ function InnerRadiusCalculator() {
 				<input
 					id='outer-radius'
 					min='0'
+					max='150'
 					type='number'
+					value={outerRadius}
+					onChange={(event) => {
+						const nextOuterRadius = +event.target.value;
+						console.log(
+							'typeof: nextInnerRadius: ',
+							typeof nextOuterRadius
+						);
+						innerRadiusCalculation(padding, nextOuterRadius);
+						setOuterRadius(nextOuterRadius);
+					}}
+				/>
+				<input
+					type='range'
+					min='0'
+					max='300'
 					value={outerRadius}
 					onChange={(event) => {
 						const nextOuterRadius = +event.target.value;
@@ -38,6 +54,19 @@ function InnerRadiusCalculator() {
 					id='padding'
 					min='0'
 					type='number'
+					value={padding}
+					onChange={(event) => {
+						const nextPadding = +event.target.value;
+						console.log('nextPadding: ', nextPadding);
+						console.log('typeofnextPadding: ', typeof nextPadding);
+						innerRadiusCalculation(nextPadding, outerRadius);
+						setPadding(nextPadding);
+					}}
+				/>
+				<input
+					type='range'
+					min='0'
+					max='150'
 					value={padding}
 					onChange={(event) => {
 						const nextPadding = +event.target.value;
