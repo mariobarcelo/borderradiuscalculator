@@ -72,6 +72,33 @@ h6 {
 	isolation: isolate;
 }
 
+/* merriweather-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./fonts/merriweather-v30-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* merriweather-sans-300 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Merriweather Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: url('./fonts/merriweather-sans-v26-latin-300.woff2')
+		format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* merriweather-sans-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Merriweather Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./fonts/merriweather-sans-v26-latin-regular.woff2')
+		format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
 	--font-size-small: clamp(0.8rem, -0.24vw + 0.86rem, 0.67rem);
 	--font-size-base: clamp(1rem, 0vw + 1rem, 1rem);

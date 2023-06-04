@@ -103,17 +103,17 @@ input[type='number'] {
 }
 
 .borderContainer {
-	margin: 0 auto;
 	min-width: 300px;
 	max-width: 300px;
 	min-height: 300px;
 	max-height: 300px;
+	margin: 0 auto;
+	border-radius: 2px;
 	overflow: hidden;
 	padding-inline-start: 3%;
 	padding-block-start: 3%;
 	background-image: radial-gradient(rgb(143 143 143) 1px, #f9f9f9 0);
 	background-size: 1.5rem 1.5rem;
-	/* background-position: -1rem -1rem; */
 }
 
 .outerElement {
