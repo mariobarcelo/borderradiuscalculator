@@ -1,50 +1,38 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
-}
-
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.card {
+.inputsContainer {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	max-width: 300px;
-	padding: 2em;
-	margin: 0 auto;
+	gap: 16px;
+	width: 100%;
+	max-width: 200px;
 }
 
 fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	text-align: center;
 	border: none;
 	width: 100%;
+}
+
+fieldset label {
+	font-size: var(--font-size-base);
+	font-weight: 400;
 }
 
 .inputWrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 8px;
 }
 
-.inputWrapper [type='range'] {
-	width: 100%;
-}
-
-.credits {
-	color: #888;
+input[type='number'] {
+	background-color: var(--primary-color);
+	color: #fff;
+	border: none;
+	border-radius: 2px;
+	padding-inline-start: 4px;
 }
 
 .slider {
@@ -52,7 +40,7 @@ fieldset {
 	--handle-radius: 1000px;
 	--track-size: 3px;
 	--bg: white;
-	--track-color: hsl(0deg 0% 50% / 0.25);
+	--track-color: hsl(0deg 0% 20% / 0.25);
 	--handle-color: hsl(18.84, 62.05%, 61.76%);
 	--track-active-color: hsl(0deg 0% 50% / 0.125);
 	--handle-active-color: hsl(19deg 66% 68%);
@@ -63,6 +51,18 @@ fieldset {
 	appearance: none;
 	outline-offset: 16px;
 	cursor: pointer;
+}
+.slider.outerRadiusSlider {
+	--handle-color: rgb(181, 81, 108);
+	--handle-active-color: rgb(198, 104, 129);
+}
+.slider.paddingSlider {
+	--handle-color: hsl(18.84, 62.05%, 61.76%);
+	--handle-active-color: hsl(19deg 66% 68%);
+}
+.slider.innerRadiusSlider {
+	--handle-color: rgb(254, 189, 86);
+	--handle-active-color: rgb(255, 198, 105);
 }
 
 .slider::-webkit-slider-thumb {
@@ -100,4 +100,34 @@ fieldset {
 .slider:active::-webkit-slider-runnable-track,
 .slider:active::-moz-range-track {
 	background: var(--track-active-color);
+}
+
+.borderContainer {
+	margin: 0 auto;
+	min-width: 300px;
+	max-width: 300px;
+	min-height: 300px;
+	max-height: 300px;
+	overflow: hidden;
+	padding-inline-start: 3%;
+	padding-block-start: 3%;
+	background-image: radial-gradient(rgb(143 143 143) 1px, #f9f9f9 0);
+	background-size: 1.5rem 1.5rem;
+	/* background-position: -1rem -1rem; */
+}
+
+.outerElement {
+	height: 100%;
+	min-width: 1000px;
+	min-height: 1000px;
+	aspect-ratio: 1 / 1;
+	background-color: rgb(181, 81, 108);
+}
+
+.innerElement {
+	background-color: rgb(254, 189, 86);
+	height: 100%;
+	min-width: 1000px;
+	min-height: 1000px;
+	aspect-ratio: 1 / 1;
 }

@@ -16,9 +16,13 @@
   3. Allow percentage-based heights in the application
 */
 html,
-body {
-	height: 100%;
+body,
+#root {
+	min-height: 100vh;
 }
+/* #root {
+	overflow-y: scroll;
+} */
 /*
   Typographic tweaks!
   4. Add accessible line-height
@@ -69,13 +73,18 @@ h6 {
 }
 
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	--font-size-small: clamp(0.8rem, -0.24vw + 0.86rem, 0.67rem);
+	--font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
+	--font-size-h3: clamp(1.25rem, 0.45vw + 1.14rem, 1.5rem);
+	--font-size-h2: clamp(1.56rem, 1.25vw + 1.25rem, 2.25rem);
+	--font-size-h1: clamp(1.95rem, 2.59vw + 1.31rem, 3.38rem);
+	--primary-color: hsl(10, 5%, 25%);
+
+	font-family: 'Merriweather Sans', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
-	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -84,56 +93,39 @@ h6 {
 	-webkit-text-size-adjust: 100%;
 }
 
-a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
-}
-
-body {
-	margin: 0;
-	display: flex;
-	place-items: center;
-	min-width: 320px;
-	min-height: 100vh;
+#root {
+	width: 100%;
+	background-image: linear-gradient(
+		140deg,
+		hsl(39deg 39% 81%) 0%,
+		hsl(38deg 35% 78%) 24%,
+		hsl(35deg 31% 76%) 37%,
+		hsl(32deg 28% 74%) 48%,
+		hsl(30deg 25% 71%) 57%,
+		hsl(29deg 21% 69%) 66%,
+		hsl(25deg 17% 66%) 74%,
+		hsl(24deg 14% 64%) 82%,
+		hsl(22deg 10% 62%) 90%,
+		hsl(18deg 6% 59%) 100%
+	);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
+	font-size: var(--font-size-h1);
+	text-align: center;
+	font-family: 'Merriweather', serif;
 }
 
-button {
-	border-radius: 8px;
-	border: 1px solid transparent;
-	padding: 0.6em 1.2em;
-	font-size: 1em;
-	font-weight: 500;
-	font-family: inherit;
-	background-color: #1a1a1a;
-	cursor: pointer;
-	transition: border-color 0.25s;
-}
-button:hover {
-	border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+h2 {
+	font-size: var(--font-size-h2);
+	text-align: center;
+	font-family: 'Merriweather', serif;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
+h1,
+h2,
+label {
+	color: var(--primary-color);
 }
