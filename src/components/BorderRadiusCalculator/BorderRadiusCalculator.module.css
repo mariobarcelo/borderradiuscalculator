@@ -36,7 +36,7 @@ input[type='number'] {
 }
 
 .slider {
-	--handle-size: 16px;
+	--handle-size: 20px;
 	--handle-radius: 1000px;
 	--track-size: 3px;
 	--bg: white;
@@ -82,11 +82,7 @@ input[type='number'] {
 	height: var(--handle-size);
 	width: var(--handle-size);
 }
-.slider:active::-webkit-slider-thumb,
-.slider:active::-moz-range-thumb {
-	cursor: grabbing;
-	background: var(--handle-active-color);
-}
+
 .slider::-webkit-slider-runnable-track {
 	width: calc(100% - var(--handle-size));
 	height: var(--track-size);
