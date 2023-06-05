@@ -23,3 +23,10 @@
 .credits a:hover {
 	text-decoration: none;
 }
+
+@media (max-width: 550px) {
+	/* Change order of the items to make the use easier on mobile */
+	.credits {
+		order: 2;
+	}
+}

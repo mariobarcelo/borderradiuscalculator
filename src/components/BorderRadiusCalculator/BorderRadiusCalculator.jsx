@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './BorderRadiusCalculator.module.css';
+import VisuallyHidden from '../VisuallyHidden/VisuallyHidden';
 
 function BorderRadiusCalculator() {
 	const [outerRadius, setOuterRadius] = React.useState(63);
@@ -26,6 +27,12 @@ function BorderRadiusCalculator() {
 		<>
 			<div className={styles.inputsContainer}>
 				<fieldset>
+					<VisuallyHidden>
+						<legend>
+							Outer Radius. This value can be controlled by the input
+							type number and by the input type slider.
+						</legend>
+					</VisuallyHidden>
 					<label htmlFor='outer-radius'>Outer Radius</label>
 					<div className={styles.inputWrapper}>
 						<input
@@ -56,6 +63,12 @@ function BorderRadiusCalculator() {
 					</div>
 				</fieldset>
 				<fieldset>
+					<VisuallyHidden>
+						<legend>
+							Padding field. This value can be controlled by the input
+							type number and by the input type slider.
+						</legend>
+					</VisuallyHidden>
 					<label htmlFor='padding'>Padding</label>
 					<div className={styles.inputWrapper}>
 						<input
@@ -85,6 +98,12 @@ function BorderRadiusCalculator() {
 					</div>
 				</fieldset>
 				<fieldset>
+					<VisuallyHidden>
+						<legend>
+							Inner Radius field. This value can be controlled by the
+							input type number and by the input type slider.
+						</legend>
+					</VisuallyHidden>
 					<label htmlFor='inner-radius'>Inner Radius</label>
 					<div className={styles.inputWrapper}>
 						<input

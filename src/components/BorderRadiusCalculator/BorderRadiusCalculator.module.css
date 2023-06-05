@@ -110,8 +110,8 @@ input[type='number'] {
 	margin: 0 auto;
 	border-radius: 2px;
 	overflow: hidden;
-	padding-inline-start: 3%;
-	padding-block-start: 3%;
+	padding-inline-start: 16px;
+	padding-block-start: 16px;
 	background-image: radial-gradient(rgb(143 143 143) 1px, #f9f9f9 0);
 	background-size: 1.5rem 1.5rem;
 }
@@ -130,4 +130,11 @@ input[type='number'] {
 	min-width: 1000px;
 	min-height: 1000px;
 	aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 550px) {
+	/* Change order of the items to make the use easier on mobile */
+	.inputsContainer {
+		order: 1;
+	}
 }
