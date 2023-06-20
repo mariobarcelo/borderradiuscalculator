@@ -1,7 +1,7 @@
 # Border Radius Calculator
 Know the perfect balanced border-radius with this border-radius calculator!
 
-<img width="512" alt="border-radius-calculator" src="https://github.com/mariobarcelo/borderradiuscalculator/assets/44384270/6af7c773-ae4b-4982-9ba5-46cb42c370a4">
+![BRC-Snippet-upgrade](https://github.com/mariobarcelo/borderradiuscalculator/assets/44384270/368e7ec7-d2aa-4b7e-85fc-c3e9d91e7fb2)
 
 ## Features ✨
 - Easily calculate the border-radius of your choice.
