@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from './BorderRadiusCalculator.module.css';
 import VisuallyHidden from '../VisuallyHidden/VisuallyHidden';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { Clipboard, Check } from 'react-feather';
+import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function BorderRadiusCalculator() {
 	const [outerRadius, setOuterRadius] = React.useState(63);
 	const [padding, setPadding] = React.useState(32);
 	const [innerRadius, setInnerRadius] = React.useState(31);
+	const [isCopied, setIsCopied] = React.useState(false);
 
 	function innerRadiusCalculation(paddingParam, outerRadiusParam) {
 		let nextInnerRadius = outerRadiusParam - paddingParam;
@@ -22,6 +26,16 @@ function BorderRadiusCalculator() {
 		}
 		setOuterRadius(nextOuterRadius);
 	}
+
+	const codeString = `.outerElement {
+  border-radius: ${outerRadius}px;
+  padding: ${padding}px;
+}
+
+.innerElement {
+  border-radius: ${innerRadius}px;
+}
+`;
 
 	return (
 		<>
@@ -147,6 +161,38 @@ function BorderRadiusCalculator() {
 							borderRadius: `${innerRadius}px`,
 						}}></div>
 				</div>
+			</div>
+			<div className={styles.codeSnippetContainer}>
+				<div className={styles.codeSnippetHeader}>
+					<button
+						className={styles.codeSnippetButton}
+						onClick={() => {
+							console.log(codeString);
+							navigator.clipboard.writeText(codeString);
+							setIsCopied(true);
+							setTimeout(() => {
+								setIsCopied(false);
+							}, 3000);
+						}}>
+						{isCopied ? (
+							<>
+								Copied!
+								<Check />
+							</>
+						) : (
+							<>
+								Copy code
+								<Clipboard />
+							</>
+						)}
+					</button>
+				</div>
+				<SyntaxHighlighter
+					language='css'
+					style={vs2015}
+					className={styles.codeSnippet}>
+					{codeString}
+				</SyntaxHighlighter>
 			</div>
 		</>
 	);

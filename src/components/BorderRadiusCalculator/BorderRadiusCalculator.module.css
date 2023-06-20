@@ -99,10 +99,10 @@ input[type='number'] {
 }
 
 .borderContainer {
-	min-width: 300px;
-	max-width: 300px;
-	min-height: 300px;
-	max-height: 300px;
+	min-width: 280px;
+	max-width: 280px;
+	min-height: 280px;
+	max-height: 280px;
 	margin: 0 auto;
 	border-radius: 2px;
 	overflow: hidden;
@@ -128,9 +128,46 @@ input[type='number'] {
 	aspect-ratio: 1 / 1;
 }
 
+.codeSnippet {
+	padding: 20px 25px !important;
+	width: 280px;
+	border-radius: 2px;
+	font-size: var(--font-size-base);
+}
+
+.codeSnippetHeader {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 5px;
+	padding: 10px 10px 0 10px;
+	background-color: rgb(30, 30, 30);
+	border-start-end-radius: 2px;
+	border-start-start-radius: 2px;
+}
+
+.codeSnippetButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 42px;
+	gap: 5px;
+	padding: 5px 10px;
+	border: 0px;
+	width: 100%;
+	color: var(--primary-color);
+	background-color: #fff;
+}
+.codeSnippetButton:hover {
+	cursor: pointer;
+}
+
 @media (max-width: 550px) {
 	/* Change order of the items to make the use easier on mobile */
 	.inputsContainer {
 		order: 1;
+	}
+	.codeSnippetContainer {
+		order: 2;
 	}
 }
