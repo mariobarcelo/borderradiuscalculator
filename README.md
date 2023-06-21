@@ -16,12 +16,14 @@ Know the perfect balanced border-radius with this border-radius calculator!
 ## What I've learned 🎓
 - Be able to create a dynamic tool!
 - Simplify the code if possible. At the beginning I had created a selector for the type of border radius you wanted to know. That meant that I had to have the tool in duplicate, having almost the same code twice. After a lot of thought I was able to simplify it and I think it is pretty good.
+- How to add copyable code using [React Syntax Highlighter](https://www.npmjs.com/package/react-syntax-highlighter).
 
 ## What I used 🛠️
 - CSS modules.
 - Fluid typography.
 - Self hosted fonts.
 - [VisuallyHidden](https://www.joshwcomeau.com/snippets/react-components/visually-hidden/) component.
+- [React Syntax Highlighter](https://www.npmjs.com/package/react-syntax-highlighter).
 
 ## Going further 🚀
 These would be the possible next steps for this project:
